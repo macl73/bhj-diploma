@@ -18,9 +18,11 @@ class TransactionsPage {
 
   registerEvents() {
     this.element.querySelector(".remove-account").addEventListener("click", () => this.removeAccount());
-    const transactionRemove = this.element.querySelectorAll(".transaction__remove");
-    transactionRemove.forEach(elem => {
-      elem.addEventListener("click", () => this.removeTransaction(elem.dataset.id));
+    this.element.addEventListener("click", event => {
+      event.preventDefault();
+      if (event.target.closest(".transaction__remove").dataset.id) {
+        this.removeTransaction(event.target.closest(".transaction__remove").dataset.id);
+      }
     })
   }
 
@@ -117,9 +119,9 @@ class TransactionsPage {
   renderTransactions(data){
     const content = this.element.querySelector(".content");
     data.forEach(elem => content.insertAdjacentHTML("beforeend", this.getTransactionHTML(elem)));
-    const transactionRemove = this.element.querySelectorAll(".transaction__remove");
+    /*const transactionRemove = this.element.querySelectorAll(".transaction__remove");
     transactionRemove.forEach(elem => {
       elem.addEventListener("click", () => this.removeTransaction(elem.dataset.id));
-    })
+    })*/
   }
 }

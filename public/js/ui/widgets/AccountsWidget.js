@@ -11,10 +11,12 @@ class AccountsWidget {
 
   registerEvents() {
     this.element.querySelector(".create-account").addEventListener("click", () => App.getModal("createAccount").open());
-    setTimeout(() => {
-      const accountList = this.element.querySelectorAll(".account");
-      accountList.forEach(account => account.addEventListener("click", () => this.onSelectAccount(account)));
-    }, 100);
+    this.element.addEventListener("click", event => {
+      event.preventDefault();
+      if (event.target.closest(".account").dataset.id) {
+        this.onSelectAccount(event.target.closest(".account"));
+      }
+    })
   }
 
   update() {

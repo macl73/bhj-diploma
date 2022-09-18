@@ -34,11 +34,6 @@
       "name": "Банк",
       "user_id": "1",
       "id": "a3xbd5s0l83bled2"
-    },
-    {
-      "name": "Школа",
-      "user_id": "1",
-      "id": "a3xbdbr4l87gox6h"
     }
   ],
   "transactions": [
@@ -158,24 +153,6 @@
       "account_id": "a3xbd5s0l83bled2",
       "user_id": "1",
       "created_at": "2022-09-18T14:54:31.782Z"
-    },
-    {
-      "id": "a3xbdbr4l87gmawo",
-      "type": "expense",
-      "name": "Ипотека",
-      "sum": 90000,
-      "account_id": "a3xbd5s0l83bled2",
-      "user_id": "1",
-      "created_at": "2022-09-18T14:54:42.360Z"
-    },
-    {
-      "id": "a3xbdbr4l87gn6yv",
-      "type": "expense",
-      "name": "Кредит",
-      "sum": 80000,
-      "account_id": "a3xbd5s0l83bled2",
-      "user_id": "1",
-      "created_at": "2022-09-18T14:55:23.911Z"
     }
   ]
 }
